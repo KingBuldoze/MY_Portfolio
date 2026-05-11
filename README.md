@@ -1,6 +1,6 @@
-# Iron Man Portfolio
+# Personal Portfolio
 
-A premium, cinematic portfolio experience inspired by the Iron Man HUD and neural link interface.
+A premium, cinematic portfolio experience inspired by high-tech HUD systems and neural link interfaces.
 
 ## Features
 - **Neural Link Interface**: High-performance cinematic loading sequence.

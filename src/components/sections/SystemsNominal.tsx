@@ -92,7 +92,7 @@ export function SystemsNominal() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                title: "Project JARVIS",
+                title: "Project Neural Assistant",
                 desc: "Gesture-controlled AI assistant leveraging Computer Vision and NLP for home automation.",
                 tag: "MEDIAPIPE / PYTHON",
               },

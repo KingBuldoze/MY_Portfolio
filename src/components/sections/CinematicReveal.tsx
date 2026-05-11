@@ -8,7 +8,7 @@ import { BEATS } from "@/lib/cinematic";
 export function CinematicReveal() {
   const sectionRef = useRef<HTMLElement | null>(null);
   const h2InevitableRef = useRef<HTMLHeadingElement | null>(null);
-  const h2IronManRef = useRef<HTMLHeadingElement | null>(null);
+  const h2PersonalRef = useRef<HTMLHeadingElement | null>(null);
   const outroRef = useRef<HTMLDivElement | null>(null);
   const progressFillRef = useRef<HTMLDivElement | null>(null);
   const seqReadoutRef = useRef<HTMLSpanElement | null>(null);
@@ -107,9 +107,9 @@ export function CinematicReveal() {
       h2InevitableRef.current.style.opacity = String(op);
     }
 
-    if (h2IronManRef.current) {
+    if (h2PersonalRef.current) {
       const op = Math.min(1, Math.max(0, (currentSmooth - 0.48) / 0.1));
-      h2IronManRef.current.style.opacity = String(op);
+      h2PersonalRef.current.style.opacity = String(op);
     }
 
     if (outroRef.current) {
@@ -299,7 +299,7 @@ export function CinematicReveal() {
               <span className="text-accent">the solution.</span>
             </h2>
             <h2
-              ref={h2IronManRef}
+              ref={h2PersonalRef}
               className="absolute inset-0 font-sans text-4xl font-semibold leading-[0.98] tracking-tighter text-foreground md:text-6xl lg:text-7xl"
               style={{ opacity: 0, transition: "opacity 240ms ease-out" }}
             >

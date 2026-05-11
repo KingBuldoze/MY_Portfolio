@@ -173,7 +173,7 @@ export function CinematicReveal() {
   // Capture engine for CinematicReveal
   useEffect(() => {
     const video = document.createElement("video");
-    video.src = `${window.location.origin}/MY_Portfolio/reveal.mp4`;
+    video.src = "reveal.mp4";
     video.muted = true;
     video.playsInline = true;
     video.preload = "auto";

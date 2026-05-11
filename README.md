@@ -1,4 +1,5 @@
 # Personal Portfolio
+To visit my website click:https://kingbuldoze.github.io/MY_Portfolio/
 
 A premium, cinematic portfolio experience inspired by high-tech HUD systems and neural link interfaces.
 
@@ -15,13 +16,6 @@ A premium, cinematic portfolio experience inspired by high-tech HUD systems and 
 - Canvas API
 - Vanilla CSS
 
-## Getting Started
 
-First, run the development server:
 
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) to view the project.
 

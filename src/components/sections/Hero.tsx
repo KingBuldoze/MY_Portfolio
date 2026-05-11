@@ -144,7 +144,8 @@ export function Hero() {
   // High-performance frame capture engine
   useEffect(() => {
     const video = document.createElement("video");
-    video.src = "hero.mp4";
+    const basePath = '/MY_Portfolio';
+    video.src = `${basePath}/hero.mp4`;
     video.muted = true;
     video.playsInline = true;
     video.preload = "auto";

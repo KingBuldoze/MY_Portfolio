@@ -107,9 +107,22 @@ export function Hero() {
       if (prev.size === newVisible.size && [...prev].every(id => newVisible.has(id))) return prev;
       return newVisible;
     });
-
-    stateRef.current.rafId = requestAnimationFrame(renderFrame);
   }, [imagesLoaded]);
+
+  useEffect(() => {
+    let rafId: number;
+    const loop = () => {
+      renderFrame();
+      rafId = requestAnimationFrame(loop);
+      stateRef.current.rafId = rafId;
+    };
+
+    rafId = requestAnimationFrame(loop);
+
+    return () => {
+      cancelAnimationFrame(rafId);
+    };
+  }, [renderFrame]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -122,11 +135,9 @@ export function Hero() {
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    stateRef.current.rafId = requestAnimationFrame(renderFrame);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      cancelAnimationFrame(stateRef.current.rafId);
     };
   }, [renderFrame]);
 

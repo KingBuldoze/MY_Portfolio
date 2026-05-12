@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowUpRight } from "@phosphor-icons/react";
+import { ArrowUpRight, GithubLogo } from "@phosphor-icons/react";
 import { EyebrowBadge } from "@/components/ui/EyebrowBadge";
 import { AnimatedItem, AnimatedSection } from "@/components/ui/AnimatedSection";
 
@@ -81,7 +81,6 @@ export function SystemsNominal() {
           </AnimatedSection>
         </div>
 
-        {/* Projects Grid */}
         <AnimatedSection className="mt-12 border-t border-white/5 pt-16">
           <AnimatedItem>
             <h3 className="mb-10 font-mono text-[10px] font-bold uppercase tracking-[0.4em] text-accent">
@@ -92,30 +91,71 @@ export function SystemsNominal() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                title: "Project Neural Assistant",
-                desc: "Gesture-controlled AI assistant leveraging Computer Vision and NLP for home automation.",
-                tag: "MEDIAPIPE / PYTHON",
+                title: "AI Empathy Coach",
+                desc: "Medical communication training toolkit using GenAI to simulate patient roleplay and provide empathy feedback.",
+                tag: "LLM / NEXT.JS / NLP",
+                link: "https://github.com/KingBuldoze/AI_Empathy_coach",
+                highlight: true,
               },
               {
-                title: "Autonomous Navigator",
-                desc: "Lane-following system using PID control and real-time sensor fusion on Arduino platform.",
-                tag: "EMBEDDED C / CV",
+                title: "AI for Visually Impaired",
+                desc: "Integrated assistant featuring face recognition, object detection, and emergency alerts for the visually impaired.",
+                tag: "YOLOv11 / PYTHON / CV",
+                link: "https://github.com/VILAS07/Integrated-AI-Assistant-for-Visually-Impaired-People",
+                highlight: true,
               },
               {
-                title: "Neural Engine",
-                desc: "Optimized inference pipeline for edge devices, reducing latency by 40% using TensorRT.",
-                tag: "TENSORRT / C++",
+                title: "Gesture Based AI",
+                desc: "Real-time sign language interpretation system using computer vision and machine learning for seamless communication.",
+                tag: "KERAS / OPENCV / AI",
+                link: "https://github.com/VILAS07/Sign-Language-Recogonition",
+                highlight: true,
+              },
+              {
+                title: "Fraud Detection",
+                desc: "Advanced machine learning model for identifying fraudulent transactions and patterns in financial data.",
+                tag: "ML / PYTHON / SKLEARN",
+                link: "https://github.com/KingBuldoze/Fraud_Detection",
+                highlight: false,
+              },
+              {
+                title: "RAG Pipeline",
+                desc: "Implementation of Retrieval-Augmented Generation for efficient document retrieval and context-aware responses.",
+                tag: "LLM / VECTOR-DB / RAG",
+                link: "https://github.com/KingBuldoze/RAG",
+                highlight: false,
               },
             ].map((p) => (
               <AnimatedItem key={p.title}>
-                <div className="group relative flex h-full flex-col gap-3 rounded-2xl border border-white/5 bg-white/[0.02] p-6 transition-all duration-300 hover:bg-white/[0.04]">
+                <a 
+                  href={p.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className={`group relative flex h-full flex-col gap-3 rounded-2xl border p-6 transition-all duration-300 ${
+                    p.highlight 
+                      ? "border-accent/30 bg-accent/[0.03] hover:bg-accent/[0.06] hover:border-accent/50 shadow-[0_0_20px_rgba(212,162,47,0.02)]" 
+                      : "border-white/5 bg-white/[0.02] hover:bg-white/[0.04]"
+                  }`}
+                >
                   <div className="flex items-center justify-between">
-                    <span className="font-mono text-[9px] uppercase tracking-widest text-zinc-500">{p.tag}</span>
-                    <div className="h-1.5 w-1.5 rounded-full bg-accent/40 group-hover:bg-accent" />
+                    <span className={`font-mono text-[9px] uppercase tracking-widest ${p.highlight ? "text-accent/80" : "text-zinc-500"}`}>{p.tag}</span>
+                    <GithubLogo size={16} className={`${p.highlight ? "text-accent/60" : "text-zinc-600"} group-hover:text-accent transition-colors`} />
                   </div>
-                  <h4 className="font-sans text-lg font-medium text-foreground">{p.title}</h4>
-                  <p className="font-sans text-sm leading-relaxed text-zinc-400">{p.desc}</p>
-                </div>
+                  <h4 className="font-sans text-lg font-medium text-foreground group-hover:text-accent transition-colors">{p.title}</h4>
+                  <p className="font-sans text-sm leading-relaxed text-zinc-400 line-clamp-3">{p.desc}</p>
+                  <div className="mt-auto pt-4 flex items-center justify-between font-mono text-[9px] uppercase tracking-tighter transition-colors">
+                    <span className="text-zinc-500 group-hover:text-accent/80">Execute_Link</span>
+                    <ArrowUpRight size={12} weight="bold" className="text-accent/40 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent" />
+                  </div>
+                  
+                  {p.highlight && (
+                    <div className="absolute -right-px -top-px h-12 w-12 overflow-hidden rounded-tr-2xl">
+                      <div className="absolute right-[-20px] top-[6px] w-[60px] rotate-45 bg-accent/20 py-0.5 text-center font-mono text-[6px] uppercase tracking-widest text-accent backdrop-blur-sm">
+                        Prime
+                      </div>
+                    </div>
+                  )}
+                </a>
               </AnimatedItem>
             ))}
           </div>

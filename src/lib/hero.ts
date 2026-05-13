@@ -17,7 +17,7 @@ export const DIALOGUES: Dialogue[] = [
     id: "d1",
     show: 0.1,
     hide: 0.3,
-    quote: "AI and Machine Learning Engineer specializing in Computer Vision, Generative AI, and Real-Time Intelligent Systems.",
+    quote: "AI and Data Science Engineer specializing in Computer Vision, Generative AI, and Real-Time Intelligent Systems.",
     speaker: "Abhay Das",
     film: "PROFESSIONAL SUMMARY",
   },

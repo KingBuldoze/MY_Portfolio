@@ -272,7 +272,7 @@ export function Hero() {
             <span className="text-accent">Abhay Das.</span>
           </h1>
           <p className="max-w-[42ch] font-sans text-sm leading-relaxed text-zinc-400 md:text-base">
-            AI/ML Engineer specializing in Computer Vision and Generative AI.
+            AI & Data Science Engineer specializing in Generative AI and Computer Vision.
             Scroll to run a full diagnostic on my latest deployments —
             Systems standing by.
           </p>
@@ -285,7 +285,7 @@ export function Hero() {
         >
           <span className="inline-flex items-center gap-2.5 font-mono text-[10px] uppercase tracking-[0.3em] text-accent">
             <span aria-hidden className="inline-block h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_10px_rgba(212,162,47,0.85)]" />
-            Protocol &mdash; AI/ML ENGINEER
+            Protocol &mdash; AI & DATA SCIENCE ENGINEER
           </span>
           <h2 className="font-sans font-semibold leading-[0.88] tracking-tighter text-foreground text-[clamp(4rem,9.5vw,9rem)]">
             Architecting

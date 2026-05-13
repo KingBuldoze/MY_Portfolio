@@ -5,11 +5,11 @@ import { EyebrowBadge } from "@/components/ui/EyebrowBadge";
 import { AnimatedItem, AnimatedSection } from "@/components/ui/AnimatedSection";
 
 const telemetry = [
-  { label: "Core Intelligence", value: "Python / R", note: "ML Algorithms & Data Research" },
-  { label: "Neural Frameworks", value: "PyTorch / Java", note: "Architecting Complex Models" },
-  { label: "Vision Processing", value: "OpenCV", note: "Real-time Gesture Recognition" },
-  { label: "Hardware Link", value: "Arduino / C", note: "Autonomous Navigation Systems" },
-  { label: "Data Integrity", value: "SQL", note: "Secure Database Management" },
+  { label: "Core Intelligence", value: "Python / R / SQL", note: "ML Algorithms & Data Research" },
+  { label: "Neural Frameworks", value: "PyTorch / TensorFlow", note: "Architecting Deep Neural Networks" },
+  { label: "Vision Processing", value: "OpenCV / YOLO", note: "Real-time Detection & Recognition" },
+  { label: "Generative AI", value: "LLMs / RAG", note: "Prompt Engineering & Vector DBs" },
+  { label: "Data Analytics", value: "Pandas / Sklearn", note: "Statistical Modeling & Insights" },
 ];
 
 export function SystemsNominal() {
@@ -32,8 +32,9 @@ export function SystemsNominal() {
             </AnimatedItem>
             <AnimatedItem>
               <p className="max-w-[48ch] font-sans text-base leading-relaxed text-zinc-400 md:text-lg">
-                Currently pursuing a <span className="text-foreground">BTech in AI & Data Science</span> at Vimal Jyothi Engineering College. 
-                My expertise lies in developing sophisticated neural architectures and autonomous vision systems. 
+                BTech Graduate in <span className="text-foreground">AI & Data Science</span> from Vimal Jyothi Engineering College. 
+                Previously pursued an MSc in Artificial Intelligence from <span className="text-foreground">Touro University, New York, USA.</span>
+                {" "}My expertise lies in developing sophisticated neural architectures and autonomous vision systems. 
                 From gesture-controlled assistants to PID-stabilized navigation, I bridge the gap between 
                 hardware programming and high-level artificial intelligence.
               </p>
@@ -72,7 +73,7 @@ export function SystemsNominal() {
                       {row.note}
                     </span>
                   </div>
-                  <span className="text-2xl font-semibold tracking-tight text-foreground md:text-3xl">
+                  <span className="text-2xl font-semibold tracking-tight text-foreground md:text-3xl text-right">
                     {row.value}
                   </span>
                 </div>

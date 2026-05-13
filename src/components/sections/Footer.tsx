@@ -17,8 +17,8 @@ export function Footer() {
               Abhay / Das / Nambiar
             </div>
             <p className="max-w-[38ch] font-sans text-sm leading-relaxed text-zinc-400">
-              &copy; Abhay Das Portfolio &mdash; AI Engineer.
-              Specializing in Computer Vision, Machine Learning, and Neural Architectures.
+              &copy; Abhay Das Portfolio &mdash; AI & Data Science Engineer.
+              Specializing in Generative AI, Data Analytics, and Computer Vision.
             </p>
             <div className="mt-2 flex flex-col gap-2 font-mono text-[10px] uppercase tracking-widest text-zinc-500">
               <a href="tel:06282452669" className="hover:text-accent transition-colors">+91 06282452669</a>
@@ -29,11 +29,11 @@ export function Footer() {
           <nav className="grid grid-cols-2 gap-x-10 gap-y-3 md:grid-cols-3">
             {[
               ["AI Empathy Coach", "Generative AI"],
+              ["RAG Pipeline", "Vector Databases"],
+              ["Fraud Detection", "Data Science"],
               ["Smart Vision Glass", "Computer Vision"],
-              ["Neural Stylizer", "Style Transfer"],
-              ["Handover Assist", "Edge AI"],
+              ["Neural Stylizer", "Deep Learning"],
               ["Gesture Control", "Mediapipe"],
-              ["Lane Follower", "Arduino/PID"],
               ["SQL Core", "Database Systems"],
             ].map(([name, note]) => (
               <a
